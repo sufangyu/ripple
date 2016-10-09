@@ -24,7 +24,8 @@
 		],
 		"libs": [
 			"js/jquery-1.9.1.min.js",
-			"js/zepto.min.js"
+			"js/zepto.min.js",
+			"js/highlight.js"
 		]
 	}
 }
