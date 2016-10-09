@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+    <meta name="wap-font-scale" content="no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+    <meta content="Material Design 水波纹点按效果" name="apple-mobile-web-app-title" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="telephone=no" name="format-detection">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<title>Material Design 水波纹点按效果</title>
+    <script src="../js/highlight.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+ 
+<div class="page">
+    <header class="header">
+        <div class="wrapper clearfix">
+            <h1 class="project-title">Material Design 水波纹点按效果</h1>
+            <div class="project-description">
+                <p>这是类似 Material Design 在点击后出现水波纹的效果，结合了 CSS3 动画实现的特效。</p>
+            </div>
+            <div class="project-follow">
+                <div class="button-group">
+                    <a href="https://github.com/sufangyu/ripple/archive/master.zip" class="button button-default">下载插件</a>
+                    <a href="https://github.com/sufangyu/ripple" class="button button-default">关注 GitHub</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="content">
+        <div class="wrapper clearfix">
+            <section class="section-heading">
+                <h2 class="section-title">插件概述</h2>
+            </section>
+
+            <section class="main">
+                <!-- S content-block  -->
+                <div class="content-block">
+                    <div class="subtitle">说明</div>
+
+                    <article class="panel">
+                        <h3 class="panel-hd">特性</h3>
+                        <div class="panel-bd">
+                            <ul>                    
+                                <li>方便使用，可使用自定义属性 data-ripple 来实例化插件</li>
+                                <li>可自定义水波纹的标签及其Class Name</li>
+                                <li>同时支持 jQuery 和 Zepto 库</li>
+                              </ul>
+                        </div>
+                    </article>
+
+                    <article class="panel">
+                        <h3 class="panel-hd">兼容性</h3>
+                        <div class="panel-bd">
+                            <ul>                    
+                                <li>Chrome、Firefox 22+、Opera 9+、Safari、IE10+</li>
+                                <li>Android 2.3+</li>
+                                <li>iOS 8+</li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                </div>
+                <!-- E content-block  -->
+
+
+                <!-- S content-block  -->
+                <div class="content-block">
+                    <div class="subtitle">使用与示例</div>
+
+                    <article class="panel">
+                        <h3 class="panel-hd">使用说明</h3>
+                        <div class="panel-bd">
+                            <h4>1、引入 CSS 文件</h4>
+<div class="hl-section">
+<pre><code class="html">&ltlink rel="stylesheet" href="../css/ripple.css" /&gt</code></pre>
+</div>
+                            <h4>2、引入 JS 文件</h4>
+<div class="hl-section">
+<pre><code class="javascript">&ltscript src="../js/zepto.min.js"&gt&lt/script&gt
+&ltscript src="../js/ripple.js"&gt&lt/script&gt
+</code></pre>
+</div>
+                            <h4>3、HTML 结构</h4>
+<div class="hl-section">
+<pre><code class="javascript">&ltbutton class="ripple-wrapper"&gt水波纹按钮&lt/button&gt
+</code></pre>
+</div>
+                            <p class="hl-red">注：Class Name "ripple-wrapper" 为必须的。</p>
+                            <h4>4、实例化</h4>
+<div class="hl-section">
+<pre><code class="javascript">$(document).ready(function() {
+    $('.ripple-wrapper').ripple();
+});</code></pre>
+</div>
+                        </div>
+                    </article>
+
+
+                    <article class="panel">
+                        <h3 class="panel-hd">示例</h3>
+                        <div class="panel-bd">
+                            
+                            <!-- S example-item -->
+                            <div class="example-item">
+                                <h4 class="example-name">JS 实例化</h4>
+                                <div class="example-show">
+                                    <div class="button-group">
+                                        <button id="btn-01" class="ripple-wrapper button button1">水波纹按钮</button>
+                                        <button id="btn-02" class="ripple-wrapper button button2">水波纹按钮</button>
+                                        <button id="btn-03" class="ripple-wrapper button button3">水波纹按钮</button>
+                                    </div>
+                                </div>
+                                <div class="example-code">    
+<div class="hl-section">
+<pre><code class="javascript">$(document).ready(function() {
+    $('#btn-01').ripple();
+});</code></pre>
+</div>
+                                </div>
+                            </div>
+                            <!-- E example-item  -->
+
+                            <!-- S example-item -->
+                            <div class="example-item">
+                                <h4 class="example-name">data-ripple 实例化</h4>
+                                <div class="example-show">
+                                    <div class="button-group">
+                                        <button class="ripple-wrapper button button1" data-ripple>水波纹按钮</button>
+                                        <button class="ripple-wrapper button button2" data-ripple>水波纹按钮</button>
+                                    </div>
+                                </div>
+                                <div class="example-code">    
+<div class="hl-section">
+<pre><code class="html">&ltbutton class="ripple-wrapper button button1" data-ripple&gt按钮&lt/button&gt</code></pre>
+</div>
+                                </div>
+                            </div>
+                            <!-- E example-item  -->
+
+
+
+                            <!-- S example-item -->
+                            <div class="example-item">
+                                <h4 class="example-name">列表水波纹</h4>
+                                <div class="example-show">
+                                    <ul class="new-list">
+                                        <li><a href="javascript:;">└ 10月编程语言排行榜 : GO 问鼎本年度语言 ?</a></li>
+                                        <li><a href="javascript:;">└ 在 2016 年学 JavaScript 是一种什么样的体验？</a></li>
+                                        <li><a href="javascript:;">└ 每个 JavaScript 开发者都该懂的 Unicode</a></li>
+                                        <li><a href="javascript:;">└ Medit —— 创新型移动端富文本编辑器</a></li>
+                                        <li><a href="javascript:;">└ 微信小程序版音乐播放器 wmusic</a></li>
+                                        <li><a href="javascript:;">└ 入前端深似海，未来路该何去何从？</a></li>
+                                    </ul>
+                                </div>
+                                <div class="example-code">    
+<div class="hl-section">
+<pre><code class="javascript">$('.new-list a').ripple();</code></pre>
+</div>
+                                </div>
+                            </div>
+                            <!-- E example-item  -->
+
+                        </div>
+                    </article>
+
+                </div>
+                <!-- E content-block  -->
+
+
+                <!-- S content-block  -->
+                <div class="content-block">
+                    <div class="subtitle">API</div>
+
+                    <article class="panel">
+                        <h3 class="panel-hd">参数</h3>
+                        <div class="panel-bd">
+                            <div class="parameter-desc">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>参数</th>
+                                            <th>默认值</th>
+                                            <th>说明</th>
+                                        </tr>                           
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>tagName</td>
+                                            <td><p>'span'</p></td>
+                                            <td>水波纹标签名称</td>
+                                        </tr>
+                                        <tr>
+                                            <td>className</td>
+                                            <td><p>'ripple'</p></td>
+                                            <td>水波纹标签的 Class Name</td>
+                                        </tr>                                         
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+                <!-- E content-block  -->
+
+
+
+            </section>
+
+            <aside class="sidebar">
+                <!-- S content-block  -->
+                <div class="content-block">
+                    <div class="subtitle">依赖</div>
+                    <p>需要使用 jQuery 或者 Zepto 库</p>
+                </div>
+                <!-- E content-block  -->
+
+                <!-- S content-block  -->
+                <div class="content-block">
+                    <div class="subtitle">版本</div>
+                    <ul class="history-version">
+                        <li><span class="version">v1.0.1</span><span class="time">2016-10-08</span></li>
+                        <li><span class="version">v1.0.0</span><span class="time">2016-09-15</span></li>
+                    </ul>
+                </div>
+                <!-- E content-block  -->
+
+                <!-- S content-block  -->
+                <div class="content-block">
+                    <div class="subtitle">协议</div>
+                    <p>MIT</p>
+                </div>
+                <!-- E content-block  -->
+            </aside>
+        </div>
+    </section>
+</div>
+
+<link rel="stylesheet" href="../css/ripple.css">
+<script src="../js/zepto.min.js"></script>
+<script src="../js/ripple.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#btn-01').ripple();
+        $('#btn-02').ripple();
+        $('#btn-03').ripple();
+        $('#btn-04').ripple();
+
+        $('.new-list a').ripple();
+    });
+</script>
+    
+</div>
+</body>

@@ -1,0 +1,14 @@
+/**
+ *  详细参数说明
+ *  http://www.cnblogs.com/airquality/articles/4810506.html
+ */
+
+{
+    "curly": true,
+    "eqeqeq": true,
+    "eqnull": true,
+    "browser": true,
+    "globals": {
+        "jQuery": true
+    }
+}

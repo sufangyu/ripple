@@ -1,0 +1,30 @@
+{	
+	"name": "ripple",
+	"description": "点击水波纹",
+	"version": "1.0.0",
+	"homepage": "https://github.com/sufangyu/ripple",
+	"download": "https://github.com/sufangyu/ripple/archive/master.zip",
+	"author": {
+		"name": "方雨_Yu",
+		"email": "304683191@qq.com",
+		"url": "https://github.com/sufangyu"
+	},
+	"license": "MIT",
+
+
+	"dist": {
+		"dir": "dist"
+		
+	},
+
+	"src":{
+		"dir": "src",
+		"scripts": [
+			"src/js/ripple.js"
+		],
+		"libs": [
+			"js/jquery-1.9.1.min.js",
+			"js/zepto.min.js"
+		]
+	}
+}
